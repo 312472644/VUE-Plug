@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <keyboard v-model="password" @complete="complete"></keyboard>
-    <div style="color:red">{{password}}</div>
+    <timeline></timeline>
   </div>
 </template>
 

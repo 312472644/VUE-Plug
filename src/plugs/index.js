@@ -1,6 +1,7 @@
-import keyBoard from './keyboard/index';
+import keyboard from './keyboard/index';
+import timeline from './timeline/index';
 
-const components = [keyBoard];
+const components = [keyboard, timeline];
 
 const install = (vue) => {
     components.map(component => {
@@ -13,7 +14,13 @@ if (typeof window !== undefined && window.vue) {
     install(window.vue);
 }
 
+//导出全部插件
 export default {
-    install,
-    ...components
+    install
 };
+
+//按需导出插件
+export {
+    keyboard,
+    timeline
+}

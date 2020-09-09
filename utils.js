@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const tool = {
+const utils = {
     init() {
         let plugParam = this.getPlugParam();
         if (plugParam.mode) {
@@ -55,7 +55,7 @@ const tool = {
         if (fileData) {
             fileData = JSON.parse(fileData.toString());
             fileData['keywords'] = [];
-            fileData['name'] = 'sugar-'.concat(name);
+            fileData['name'] = name !== 'sugar-ui' ? 'sugar-'.concat(name) : name;
             fileData['main'] = `./dist/${name}.common.js`;
             fileData['description'] = description;
             fileData['keywords'].push(keywords);
@@ -83,6 +83,5 @@ const tool = {
 };
 
 
-// console.log('args', args);
-tool.init();
-module.exports = tool;
+utils.init();
+module.exports = utils;

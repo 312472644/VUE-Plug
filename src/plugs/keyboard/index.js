@@ -1,7 +1,7 @@
-import keyBoard from './keyboard.vue';
+import keyboard from './keyboard.vue';
 
-keyBoard.install = (vue) => {
-    vue.component(keyBoard.name, keyBoard);
+keyboard.install = (vue) => {
+    vue.component(keyboard.name, keyboard);
 
 };
-export default keyBoard;
+export default keyboard;

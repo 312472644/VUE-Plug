@@ -1,24 +1,8 @@
-const tool = require('./tool');
-const path = require('path');
+const utils = require('./utils');
 
-function resolve(dir) {
-    return path.join(__dirname, '.', dir)
-}
 module.exports = {
+    outputDir: "lib",
     css: {
         extract: false
-    },
-    // chainWebpack: config => {
-    //     config.module.rules.delete('svg');
-    //     config.module
-    //         .rule('svg-sprite-loader')
-    //         .test(/\.svg$/)
-    //         .include.add(resolve('src/assets/images'))
-    //         .end()
-    //         .use('svg-sprite-loader')
-    //         .loader('svg-sprite-loader')
-    //         .options({
-    //             symbolId: 'icon-[name]'
-    //         })
-    // }
+    }
 };

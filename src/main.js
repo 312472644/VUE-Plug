@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import keyBoard from './plugs/index'
-
-Vue.config.productionTip = false
-Vue.use(keyBoard);
+import sugarUI from './plugs/index'
+Vue.use(sugarUI);
 
 new Vue({
   render: h => h(App),
